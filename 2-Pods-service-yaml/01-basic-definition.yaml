@@ -1,0 +1,12 @@
+apiVersion: v1    
+kind: POD or Deployment         
+metadata:        
+  name: myapp-pod
+  labels:         
+    app: myapp
+spec:            
+  containers:     
+    - name: myapp
+      image: devops/mynginx_image1:v1
+      ports:
+        - containerPort: 80
