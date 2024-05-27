@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mycluster
+  region: us-east-1 
+
+nodeGroups:
+  - name: worker-nodes
+    instanceType: t3.medium
+    minSize: 1
+    maxSize: 4
+    desiredCapacity: 2
+    volumeSize: 30
+    ssh:
+      allow: false # will use ~/.ssh/id_rsa.pub as the default ssh key
