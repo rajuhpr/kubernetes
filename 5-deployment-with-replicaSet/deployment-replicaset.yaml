@@ -1,0 +1,22 @@
+apiVersion: apps/v1 
+kind: Deployment        
+metadata: 
+  name: deployment-with-replicaset  
+  labels:         
+    app: deployment
+spec:  
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      name: deployment-with-replicaset
+      labels: 
+        app: myapp
+    spec:
+      containers:     
+        - name: myapp-deployment-replicaset
+          image: nginx
+          ports:
+            - containerPort: 80
