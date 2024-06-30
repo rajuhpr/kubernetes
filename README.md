@@ -1,1 +1,1 @@
-```Kubernetes EKS cluster with declarative way of creating all services```
+```Kubernetes basics concepts with practical executable manifest files ```
