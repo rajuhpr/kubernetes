@@ -1,1 +1,21 @@
-
+apiVersion: apps/v1
+kind: Deployment        
+metadata: 
+  name: app-deployment    
+  labels:         
+    app: myapp
+spec: 
+  selector: 
+    matchLabels:
+      app: myapp  # should refer pod definition label name
+  template:
+    metadata:        
+      name: myapp-replicas
+      labels:        
+        app: myapp  #shoudld same as matchLabels app name
+    spec:
+      containers:     
+        - name: myapp-deployment
+          image: nginx
+          ports:
+            - containerPort: 80
