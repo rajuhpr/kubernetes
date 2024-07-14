@@ -10,7 +10,6 @@ spec:
       app: myapp  # should refer pod definition label name
   template:
     metadata:        
-      name: myapp-replicas
       labels:        
         app: myapp  #shoudld same as matchLabels app name
     spec:
